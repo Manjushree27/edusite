@@ -1,0 +1,572 @@
+
+
+
+body{
+    
+    font-family: 'Be Vietnam Pro',sans-serif;
+    background-color: #f9f9f9;
+    color: #263238;
+    padding: 40px;
+    
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+
+/* -------------------header section-------------- */
+
+.bi.bi-star-fill{
+    color: gold;
+    padding: 5px;
+
+/* -------------------Banner Section----------------- */
+}
+.banner{
+    background-color:#ff9900;    
+    color: white;
+    padding: 8px 0;
+    border-radius: 8px;
+    text-align:center;
+    font-weight: 500;
+    font-family: 'Be Vietnam Pro',sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap: 6px;
+    font-size: 14px;
+    
+
+}
+
+.banner i {
+    margin: 0 4px;
+}
+/* space between icon -> i */
+
+/* ------------------Navigation Bar----------------------- */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+
+    /* justify-content: space-between — THIS is what pushes left and right apart
+    justify-content: space-between spreads the two direct children of .nav:
+
+.nav-left goes to the start (left)
+
+.nav-right goes to the end (right)
+
+🔸 So you don't need to say justify-content: flex-end inside .nav-right unless 
+you want the Sign Up and Login within .nav-right to align differently 
+(e.g., right-aligned inside their own box). */
+    align-items: center;
+    padding: 12px 40px;
+    
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.nav-left{
+    display: flex;
+    align-items:center;
+    gap: 2rem;
+}
+/* left logo+home, courses,... */
+
+.logo1{
+    height: 32px;
+}
+ .nav-right {
+    display: flex;
+    align-items: center;
+ }
+
+.left, .right{
+    display: flex;
+    list-style:none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    
+}
+/* List lineup, bullets remove, space between */
+
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    
+}
+.left li a, .right li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+/* space between list items->home, courses etc.., */
+
+
+.left li:first-child a {
+    background-color: #f1f1f1;
+   
+}
+/*  boxing highlight home*/
+
+
+
+.login-btn {
+    background-color:#ff9900;
+    color:white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+
+}
+
+.login-btn :hover {
+    background-color: #e68100;
+}
+/* --------------------------------------- */
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 60px;
+    background-color: #f9f9f9;
+}
+
+
+
+.txt1{
+    display: inline-flex;  
+    align-items: center;
+    background-color:#fcfcfd  ;
+    border-radius: 12px;
+    border-color: #f1f1f3;
+    padding: 18px 32px;
+    font-size: 37px;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Be Vietnam Pro',sans-serif;
+    
+    
+    
+}
+
+.icon-text{
+    display: inline-flex;
+    /* made icon placement equal to text */
+    align-items: center;
+    gap: 10px;
+
+}
+.logo2{
+    height:28px;
+    width: auto;
+    
+}
+.highlight{
+    color: #ff9900;
+    font-weight: 600;
+    
+}
+.txt2{
+    font-family: 'Inter',sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #333;
+    margin-top: 5px;
+    
+
+}
+.txt3{
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    font-size: 16px;  
+    margin-top: 0;
+    color: #555;
+    
+
+}
+
+/* ----------------Button part-------------------------------- */
+
+.button-group{
+    display: flex;
+    gap:16px;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+   
+
+}
+
+.btn-orange{
+    background-color: #ff9900;
+    color: white;
+    padding: 15px 30px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.btn-white{
+    background-color: white;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    justify-content: center;
+
+    
+
+}
+
+/* -----------------------Container----------------------------- */
+
+.Container{
+    max-width: 1200px;
+    margin: 50px auto;
+    border: 1px solid #f1f1f3;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#fcfcfd ;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    
+}
+.wrapper{
+    padding: 0 80px;    /* Same left/right as navbar content */
+}
+
+/* ---------------video part----------------- */
+
+.video-wrapper {
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden; /* prevents playbutton from spilling */
+    padding: 0 20px;   /* same as .benefits-section */
+    box-sizing: border-box;
+}
+
+.video-inner {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.playbutton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Light transparent border */
+    backdrop-filter: blur(2px); /* Adds soft blur effect like Figma inner border */
+    
+}
+
+
+.playbutton img{
+    width: 40px;
+    height: 40px;
+}
+
+/* --------------------------------------------Benefits------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap');
+
+
+.benefits-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.benefit {
+  max-width: 900px;
+}
+
+.top {
+  font-size: 48px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 18px;
+  font-weight: 400;
+  color: #4d4d4d;
+  line-height: 1.5;
+}
+
+.view-all {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #333;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+}
+
+.number {
+  font-size: 40px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 20px;
+}
+
+.benefit-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  font-size: 16px;
+  color: #4d4d4d;
+  line-height: 1.4;
+}
+
+/* icon-arrow part */
+.icon-button {
+  width: 44px;
+  height: 44px;
+  background-color: #f9f9f9;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+.icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+.icon-button img {
+  width: 18px;
+  height: 18px;
+}
+
+/* -------------------------------------Courses Section--------------------------------------- */
+
+.course-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course {
+  max-width: 900px;
+}
+
+.course.top {
+  font-size: 48px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 10px;
+}
+
+
+.course.description {
+  font-size: 18px;
+  font-weight: 400;
+  color: #4d4d4d;
+  line-height: 1.5;
+}
+
+.view-all {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #333;
+}
+
+
+/* ------------------- Card ------------------------ */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 cards per row */
+  gap: 24px;
+}
+
+
+/* Optional Responsive Stacking (Mobile):
+To make the cards stack vertically on smaller screens: */
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ---------------------------card----------------------- */
+
+.coursecard {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+.coursecard:hover {
+  transform: translateY(-6px);
+}
+
+.coursecard img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ------------------- Tags + Instructor ----------------------- */
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: default;
+}
+
+.instructor {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-top: 4px;
+}
+
+/* ------------------ Course Text ------------------------ */
+
+.course-text .title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+  margin: 8px 0;
+}
+
+.course-text .description {
+  font-size: 14px;
+  color: #4d4d4d;
+  line-height: 1.6;
+}
+
+/* ------------------- CTA Button ------------------------- */
+
+.cta {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background-color: #f1f1f1;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #e0e0e0;
+}
+
+
+
+
+
+
+
+
+
