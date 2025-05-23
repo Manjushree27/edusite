@@ -465,18 +465,20 @@
       <!-- Left Column -->
       <div class="faq-left">
         <h2>Frequently<br>Asked Questions</h2>
-        <p>Still have any questions? Contact our Team via <a href="mailto:support@skillbridge.com">support@skillbridge.com</a></p>
+        <p>Still have any questions? Contact our Team via 
+          <a href="mailto:support@skillbridge.com">support@skillbridge.com</a>
+        </p>
         <button class="faq-button">See All FAQ's</button>
       </div>
 
       <!-- Right Column -->
       <div class="faq-right">
-        <!-- FAQ Item 1 (Open) -->
-        <div class="faq-item open">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
           <div class="faq-question">
             <span>Can I enroll in multiple courses at once?</span>
             <div class="faq-icon-wrap">
-              <img src="cross.png" class="faq-toggle" alt="Close">
+              <img src="plus.png" class="faq-toggle" alt="Open">
             </div>
           </div>
           <div class="faq-answer">
@@ -543,6 +545,7 @@
     </div>
   </section>
 </section>
+
 
 <!-- ----------------------------------------------Footer Section--------------------------- -->
 
@@ -617,7 +620,7 @@ const brandSwiper = new Swiper('.brand-swiper', {
         document.querySelector('.playbutton').style.display = 'none'; // Hide play button after clicking
     }
 
-// Pricing section part 
+// FAQ section part 
 
 document.addEventListener('DOMContentLoaded', () => {
   const faqItems = document.querySelectorAll('.faq-item');
