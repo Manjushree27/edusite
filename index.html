@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <!-- -------------------------------header section-------------------------------------- -->
-    
    <!-- --------------------------------------Banner Section------------------------------------------- -->
     <header>
     <div class="banner">
@@ -55,7 +56,11 @@
     <div class="head">
         
         <h1 class="txt1">
-            <span class="icon-text"><img src="Icon Container.png" alt="logo" class="logo2"/>
+            <span class="icon-text">
+              <div class="icon-wrapper">
+                <img src="Abstract Line (1).png" alt="spark-lines" class="spark-lines"/>
+                <img src="Icon Container.png" alt="logo" class="logo2"/>
+              </div>
             <span class="highlight">Unlock</span>
             </span>
             &nbsp;Your Creative Potential</h1>
@@ -75,31 +80,70 @@
     </section>
 
     <!---------------------brand section------------------------- -->
-    
     <section class="section-container">
-    <div class="wrapper">     <!-- This keeps spacing consistent across sections — which is ideal for UI design consistency -->
-    <div class="Container">
-        <div class="card"><img src="zapier.png" alt="zapier"></div>
-        <div class="card"><img src="spotify.png" alt="spotify"></div>
-        <div class="card"><img src="zoom.png" alt="zoom"></div>
-        <div class="card"><img src="amazon.png" alt="amazon"></div>
-        <div class="card"><img src="adobe.png" alt="adobe"></div>
-        <div class="card"><img src="notion.png" alt="notion"></div>
-        <div class="card"><img src="netflix.png" alt="netflix"></div>
-    </div>
-    </div>
-    </section>
-
-    <!-- ------------------------------video part------------------------------- -->
-    <section class="section-container"></section>
-    <div class="video-wrapper">
-        <img src="video.png" alt="video" style="max-width: 100%;" class="video">
-        <div class="playbutton">
-        <img src ="playbutton.png" alt="playbutton">
+    <div class="brand-wrapper">
+        <div class="brand-slider-container">
+            <div class="swiper brand-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="zapier.png" alt="Zapier" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="spotify.png" alt="Spotify" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="zoom.png" alt="Zoom" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="amazon.png" alt="Amazon" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="adobe.png" alt="Adobe" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="notion.png" alt="Notion" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="netflix.png" alt="Netflix" />
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
         </div>
     </div>
-    </section>
+</section>
+ 
 
+    <!-- ------------------------------video part------------------------------- -->
+   
+<section class="section-container">
+<div class="video-wrapper">
+    <div class="video-inner">
+        <video class="video" controls poster="video.png" id="myVideo">
+            <source src="Promo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="playbutton" onclick="playVideo()">
+            <img src="playbutton.png" alt="Play Button">
+        </div>
+    </div>
+</div>
+</section>
+    
     <!-- ------------------------Benefits part---------------------------- -->
 
     <section class="section-container">
@@ -160,121 +204,107 @@
 <!-- ----------------------------------------Our COurses Section-------------------------------------------- -->
 
 <section class="section-container">
-<div class="courses-section">
-    <div class="course-header">
-        <div class="course">
-            <h6 class="top">Our Courses</h6>
-            <p class="content">Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
+<section class="course-section">
+  <div class="course-header">
+    <div class="course">
+      <h2 class="course top">Our Courses</h2>
+      <p class="course description">Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
+    </div>
+    <button class="view-all">View All</button>
+  </div>
+
+  <div class="course-grid">
+    <!-- Course Card 1 -->
+    <div class="coursecard">
+      <img src="course1.png" alt="Web Design Fundamentals">
+
+      <div class="meta">
+        <div class="tags">
+          <button class="tag">4 weeks</button>
+          <button class="tag">Beginner</button>
         </div>
-        <button class="view-all">View All</button>
+        <span class="instructor">By John Smith</span>
+      </div>
+
+      <div class="course-text">
+        <h4 class="title">Web Design Fundamentals</h4>
+        <p class="description">
+          Learn the fundamentals of web design, including HTML, CSS, and responsive design principles.
+          Develop the skills to create visually appealing and user-friendly websites.
+        </p>
+      </div>
+
+      <button class="cta">Get it Now</button>
     </div>
 
-    <div class="course-grid">
-        <div class="coursecard">
-             <img src="course1.png" alt="course1" >
-             <div class="tags">
-                <button class="tag">4 weeks</button>
-                <button class="tag">Beginner</button>
-             </div>
-             <span class="instructor">By John Smith</span>
+    <!-- Course Card 2 -->
+    <div class="coursecard">
+      <img src="course2.png" alt="JavaScript Essentials">
 
-             <div class="course-text">
-                <h4 class="title">Web Design Fundamentals</h4>
-                <p class="description">Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.</p>
-             </div>
-
-             <button class="cta">Get it Now</button>
-
+      <div class="meta">
+        <div class="tags">
+          <button class="tag">6 weeks</button>
+          <button class="tag">Intermediate</button>
         </div>
+        <span class="instructor">By Sarah Johnson</span>
+      </div>
 
-         <div class="coursecard">
-             <img src="course2.png" alt="course1" >
-             <div class="tags">
-                <button class="tag">6 weeks</button>
-                <button class="tag">Intermediate</button>
-             </div>
-             <span class="instructor">By Emily Johnson</span>
+      <div class="course-text">
+        <h4 class="title">JavaScript Essentials</h4>
+        <p class="description">
+          Master the core concepts of JavaScript. Build dynamic and interactive web applications using modern JS techniques.
+        </p>
+      </div>
 
-             <div class="course-text">
-                <h4 class="title">UI/UX Design</h4>
-                <p class="description">Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.</p>
-             </div>
-
-             <button class="cta">Get it Now</button>
-
-        </div>
-
-        <div class="coursecard">
-             <img src="course3.png" alt="course1" >
-             <div class="tags">
-                <button class="tag">8 weeks</button>
-                <button class="tag">Intermediate</button>
-             </div>
-             <span class="instructor">By David Brown</span>
-
-             <div class="course-text">
-                <h4 class="title">Mobile App Development</h4>
-                <p class="description">Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.</p>
-             </div>
-
-             <button class="cta">Get it Now</button>
-
-        </div>
-
-        <div class="coursecard">
-             <img src="course4.png" alt="course1" >
-             <div class="tags">
-                <button class="tag">10 weeks</button>
-                <button class="tag">Beginner</button>
-             </div>
-             <span class="instructor">By Sarah Thompson</span>
-
-             <div class="course-text">
-                <h4 class="title">Graphic Design for Beginners</h4>
-                <p class="description">Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. Create visually stunning designs for print and digital media.</p>
-             </div>
-
-             <button class="cta">Get it Now</button>
-
-        </div>
-
-        <div class="coursecard">
-             <img src="course5.png" alt="course1" >
-             <div class="tags">
-                <button class="tag">10 weeks</button>
-                <button class="tag">Intermediate</button>
-             </div>
-             <span class="instructor">By Michael Adams</span>
-
-             <div class="course-text">
-                <h4 class="title">Front-End Web Development</h4>
-                <p class="description">Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. Build interactive and responsive websites.</p>
-             </div>
-
-             <button class="cta">Get it Now</button>
-
-        </div>
-
-        <div class="coursecard">
-             <img src="course6.png" alt="course1" >
-             <div class="tags">
-                <button class="tag">6 weeks</button>
-                <button class="tag">Advance</button>
-             </div>
-             <span class="instructor">By Jennifer Wilson</span>
-
-             <div class="course-text">
-                <h4 class="title">Advanced JavaScript</h4>
-                <p class="description">Take your JavaScript skills to the next level. Explore advanced concepts like closures, prototypes, asynchronous programming, and ES6 features. Build complex applications with confidence.</p>
-             </div>
-
-             <button class="cta">Get it Now</button>
-
-        </div>
+      <button class="cta">Get it Now</button>
     </div>
-</div>
+
+    <!-- Course Card 3 -->
+    <div class="coursecard">
+      <img src="course3.png" alt="Data Science Foundations">
+
+      <div class="meta">
+        <div class="tags">
+          <button class="tag">8 weeks</button>
+          <button class="tag">Advanced</button>
+        </div>
+        <span class="instructor">By David Lee</span>
+      </div>
+
+      <div class="course-text">
+        <h4 class="title">Data Science Foundations</h4>
+        <p class="description">
+          Get a solid foundation in data science. Learn Python, statistics, data visualization, and machine learning basics.
+        </p>
+      </div>
+
+      <button class="cta">Get it Now</button>
+    </div>
+
+    <!-- Course Card 4 -->
+    <div class="coursecard">
+      <img src="course4.png" alt="UX/UI Design Bootcamp">
+
+      <div class="meta">
+        <div class="tags">
+          <button class="tag">10 weeks</button>
+          <button class="tag">All Levels</button>
+        </div>
+        <span class="instructor">By Emily Rodriguez</span>
+      </div>
+
+      <div class="course-text">
+        <h4 class="title">UX/UI Design Bootcamp</h4>
+        <p class="description">
+          From wireframes to prototypes. Learn how to design intuitive and beautiful digital experiences for apps and websites.
+        </p>
+      </div>
+
+      <button class="cta">Get it Now</button>
+    </div>
+  </div>
 </section>
-
+</section>
 <!-- -----------------------------------------Testimonies Section------------------------------------------ -->
 
 <section class="section-container">
@@ -362,159 +392,169 @@
 
 <section class="section-container">
   <section class="pricing-section">
-  <div class="pricing-header">
-    <div>
-      <h2 class="pricing-title">Our Pricing</h2>
-      <p class="pricing-description">
-        Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. 
-        Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
-      </p>
-    </div>
-    <div class="billing-toggle">
-      <button class="billing-button active">Monthly</button>
-      <button class="billing-button">Yearly</button>
-    </div>
-  </div>
-
-  <div class="pricing-cards">
-    <!-- Free Plan -->
-    <div class="pricing-card">
-      <div class="plan-header">
-        <h3>Free Plan</h3>
+    <div class="pricing-header">
+      <div>
+        <h2 class="pricing-title">Our Pricing</h2>
+        <p class="pricing-description">
+          Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. 
+          Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
+        </p>
       </div>
-      <div class="price">
-        <span class="amount">$0</span><span class="per">/month</span>
+      <div class="billing-toggle">
+        <button class="billing-button active">Monthly</button>
+        <button class="billing-button">Yearly</button>
       </div>
-      <div class="features-section">
-        <h4>Available Features</h4>
-        <ul class="features-list">
-          <li><span class="check">✔</span> Access to selected free courses.</li>
-          <li><span class="check">✔</span> Limited course materials and resources.</li>
-          <li><span class="check">✔</span> Basic community support.</li>
-          <li><span class="check">✔</span> No certification upon completion.</li>
-          <li><span class="check">✔</span> Ad-supported platform.</li>
-          <li><span class="cross">✖</span> Access to exclusive Pro Plan community forums.</li>
-          <li><span class="cross">✖</span> Early access to new courses and updates.</li>
-        </ul>
-      </div>
-      <button class="start-button">Get Started</button>
     </div>
 
-    <!-- Pro Plan -->
-    <div class="pricing-card">
-      <div class="plan-header">
-        <h3>Pro Plan</h3>
+    <div class="pricing-cards">
+      <!-- Free Plan -->
+      <div class="pricing-card">
+        <div class="plan-header">
+          <h3>Free Plan</h3>
+        </div>
+        <div class="price">
+          <span class="amount">$0</span><span class="per">/month</span>
+        </div>
+        <div class="features-section">
+          <h4>Available Features</h4>
+          <ul class="features-list">
+            <li><span class="check">✔</span> Access to selected free courses.</li>
+            <li><span class="check">✔</span> Limited course materials and resources.</li>
+            <li><span class="check">✔</span> Basic community support.</li>
+            <li><span class="check">✔</span> No certification upon completion.</li>
+            <li><span class="check">✔</span> Ad-supported platform.</li>
+            <li><span class="cross">✖</span> Access to exclusive Pro Plan community forums.</li>
+            <li><span class="cross">✖</span> Early access to new courses and updates.</li>
+          </ul>
+        </div>
+        <button class="start-button">Get Started</button>
       </div>
-      <div class="price">
-        <span class="amount">$79</span><span class="per">/month</span>
+
+      <!-- Pro Plan -->
+      <div class="pricing-card">
+        <div class="plan-header">
+          <h3>Pro Plan</h3>
+        </div>
+        <div class="price">
+          <span class="amount">$79</span><span class="per">/month</span>
+        </div>
+        <div class="features-section">
+          <h4>Available Features</h4>
+          <ul class="features-list">
+            <li><span class="check">✔</span> Unlimited access to all courses.</li>
+            <li><span class="check">✔</span> Unlimited course materials and resources.</li>
+            <li><span class="check">✔</span> Priority support from instructors.</li>
+            <li><span class="check">✔</span> Course completion certificates.</li>
+            <li><span class="check">✔</span> Ad-free experience.</li>
+            <li><span class="check">✔</span> Access to exclusive Pro Plan community forums.</li>
+            <li><span class="check">✔</span> Early access to new courses and updates.</li>
+          </ul>
+        </div>
+        <button class="start-button">Get Started</button>
       </div>
-      <div class="features-section">
-        <h4>Available Features</h4>
-        <ul class="features-list">
-          <li><span class="check">✔</span> Unlimited access to all courses.</li>
-          <li><span class="check">✔</span> Unlimited course materials and resources.</li>
-          <li><span class="check">✔</span> Priority support from instructors.</li>
-          <li><span class="check">✔</span> Course completion certificates.</li>
-          <li><span class="check">✔</span> Ad-free experience.</li>
-          <li><span class="check">✔</span> Access to exclusive Pro Plan community forums.</li>
-          <li><span class="check">✔</span> Early access to new courses and updates.</li>
-        </ul>
-      </div>
-      <button class="start-button">Get Started</button>
     </div>
-  </div>
-</section>
-
-
+  </section>
 </section>
 
 <!-- -------------------------Frequently Asked Questions Section-------------------------------------- -->
-
 <section class="section-container">
   <section class="faq-section">
-  <div class="faq-container">
-    <!-- Left Column -->
-    <div class="faq-left">
-      <h2>Frequently<br>Asked Questions</h2>
-      <p>Still you have any questions? Contact our<br>Team via <a href="mailto:support@skillbridge.com">support@skillbridge.com</a></p>
-      <button class="faq-button">See All FAQ's</button>
+    <div class="faq-container">
+      <!-- Left Column -->
+      <div class="faq-left">
+        <h2>Frequently<br>Asked Questions</h2>
+        <p>Still have any questions? Contact our Team via <a href="mailto:support@skillbridge.com">support@skillbridge.com</a></p>
+        <button class="faq-button">See All FAQ's</button>
+      </div>
+
+      <!-- Right Column -->
+      <div class="faq-right">
+        <!-- FAQ Item 1 (Open) -->
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span>Can I enroll in multiple courses at once?</span>
+            <div class="faq-icon-wrap">
+              <img src="cross.png" class="faq-toggle" alt="Close">
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.</p>
+            <div class="faq-link">
+              <span>Enrollment Process for Different Courses</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What kind of support can I expect from instructors?</span>
+            <div class="faq-icon-wrap">
+              <img src="plus.png" class="faq-toggle" alt="Open">
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>You will receive priority support from experienced instructors through email, live sessions, and discussion forums.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are the courses self-paced or do they have specific start and end dates?</span>
+            <div class="faq-icon-wrap">
+              <img src="plus.png" class="faq-toggle" alt="Open">
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Our courses are self-paced, allowing you to learn at your own speed. There are no specific start and end dates.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are there any prerequisites for the courses?</span>
+            <div class="faq-icon-wrap">
+              <img src="plus.png" class="faq-toggle" alt="Open">
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>No prior experience is required. Our courses are designed for beginners and include foundational content.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I download the course materials for offline access?</span>
+            <div class="faq-icon-wrap">
+              <img src="plus.png" class="faq-toggle" alt="Open">
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, you can download most course materials for offline access. Some interactive content may require an internet connection.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Right Column -->
-    <div class="faq-right">
-      <!-- FAQ Item 1 (Open) -->
-      <div class="faq-item open">
-        <div class="faq-question">
-          <span>Can I enroll in multiple courses at once?</span>
-          <div class="faq-icon-wrap">
-            <img src="cross.png" class="faq-toggle" alt="Close">
-          </div>
-        </div>
-        <div class="faq-answer">
-          <p>Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.</p>
-          <div class="faq-link">
-            <span>Enrollment Process for Different Courses</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 2 -->
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What kind of support can I expect from instructors?</span>
-          <div class="faq-icon-wrap">
-            <img src="plus.png" class="faq-toggle" alt="Open">
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 3 -->
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Are the courses self-paced or do they have specific start and end dates?</span>
-          <div class="faq-icon-wrap">
-            <img src="plus.png" class="faq-toggle" alt="Open">
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 4 -->
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Are there any prerequisites for the courses?</span>
-          <div class="faq-icon-wrap">
-            <img src="plus.png" class="faq-toggle" alt="Open">
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 5 -->
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Can I download the course materials for offline access?</span>
-          <div class="faq-icon-wrap">
-            <img src="plus.png" class="faq-toggle" alt="Open">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 </section>
 
 <!-- ----------------------------------------------Footer Section--------------------------- -->
 
 <footer class="footer">
   <div class="footer-container">
+    <!-- Contact Section -->
     <div class="footer-contact">
       <img src="Logo.png" alt="Logo" class="footer-logo" />
-      <p><img src="https://img.icons8.com/ios-filled/20/000000/email.png"/> hello@skillbridge.com</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/000000/phone.png"/> +91 91813 23 2309</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/000000/marker.png"/> Somewhere in the World</p>
+      <p><img src="https://img.icons8.com/ios-filled/20/000000/email.png "/> hello@skillbridge.com</p>
+      <p><img src="https://img.icons8.com/ios-filled/20/000000/phone.png "/> +91 91813 23 2309</p>
+      <p><img src="https://img.icons8.com/ios-filled/20/000000/marker.png "/> Somewhere in the World</p>
     </div>
 
+    <!-- Links Section -->
     <div class="footer-links">
       <div>
         <h4>Home</h4>
@@ -529,26 +569,104 @@
         <p>Achievements</p>
         <p>Our Goals</p>
       </div>
-      <div>
-        <h4>Social Profiles</h4>
-        <div class="social-icons">
-          <img src="ficon.png" alt="Facebook" />
-          <img src="ticon.png" alt="Twitter" />
-          <img src="inicon.png" alt="LinkedIn" />
-        </div>
-      </div>
+    </div>
+
+    <!-- Social Icons Section -->
+    <div class="social-icons">
+      <img src="ficon.png" alt="Facebook" />
+      <img src="ticon.png" alt="Twitter" />
+      <img src="inicon.png" alt="LinkedIn" />
     </div>
   </div>
 
+  <!-- Footer Bottom Section -->
   <div class="footer-bottom">
     <p>© 2023 Skillbridge. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- ---------------------------------------------Brand swiper Section----------------------------------------- -->
+
+<script>
+const brandSwiper = new Swiper('.brand-swiper', {
+        effect: 'slide',
+        speed: 300, // Transition speed of 0.3 seconds
+        slidesPerView: 3, // Show 3 slides at a time
+        spaceBetween: 20, // Space between slides
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000, // Delay between slides
+            disableOnInteraction: false, // Continue autoplay after interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+    });
+// play button- video part section
+
+ function playVideo() {
+        const video = document.getElementById('myVideo');
+        video.play();
+        document.querySelector('.playbutton').style.display = 'none'; // Hide play button after clicking
+    }
+
+// Pricing section part 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const toggle = item.querySelector('.faq-toggle');
+
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+      toggle.textContent = item.classList.contains('active') ? '-' : '+';
+    });
+  });
+});
+
+// FAQ Section
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item, index) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const toggleIcon = item.querySelector('.faq-toggle');
+
+    // Set initial icon based on whether it's open or not
+    if (item.classList.contains('open')) {
+      toggleIcon.src = 'cross.png'; // Minus icon for the first open item
+    } else {
+      toggleIcon.src = 'plus.png'; // Plus icon for others
+    }
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close all items first (optional: if you want only one open at a time)
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('open');
+        const icon = otherItem.querySelector('.faq-toggle');
+        if (icon) icon.src = 'plus.png';
+      });
+
+      // Toggle current item
+      if (!isOpen) {
+        item.classList.add('open');
+        toggleIcon.src = 'cross.png'; // Change to minus
+      }
+    });
+  });
+});
+</script>
 
 
-
-
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
