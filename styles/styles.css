@@ -1029,8 +1029,8 @@ nav a{
 /* ----------------------------------------Footer Section--------------------------------- */
 /* Footer Container */
 .footer {
+  font-family: 'Be Vietnam Pro', sans-serif;
   background: #ffffff; /* Set background color to white */
-  font-family: 'Segoe UI', sans-serif;
   color: #333;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
