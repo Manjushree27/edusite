@@ -107,7 +107,7 @@ nav a{
     border-radius: 6px;
     
 }
-.left li a, .right li a {
+.left li a{
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -115,7 +115,10 @@ nav a{
     padding: 6px 12px;
     border-radius: 6px;
 }
-/* space between list items->home, courses etc.., */
+/* sp:ace between list items->home, courses etc.., */
+.right li:first-child a{
+  color: #333;
+}
 
 
 .left li:first-child a {
@@ -125,10 +128,9 @@ nav a{
 /*  boxing highlight home*/
 
 
-
 .login-btn {
     background-color:#ff9900;
-    color:white;
+    color:#ffffff;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 6px;
@@ -160,7 +162,7 @@ nav a{
     padding: 18px 32px;
     font-size: 37px;
     font-weight: 500;
-    color: #000;
+    color: #000;  
     font-family: 'Be Vietnam Pro',sans-serif;
     
     
@@ -181,12 +183,12 @@ nav a{
 }
 
 .spark-lines{
-  position: absolute;
-   top: -10px;
-  left: -10px;
-  width: 22px;
+  position:absolute;
+   top: -70px;
+  left: -60px;
+  width: 40px;
   height: auto;
-  z-index: 1;
+  z-index:1;
 }
 
 .logo2 {
@@ -277,7 +279,7 @@ nav a{
             border-radius: 16px;
             padding: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
+            transition:all ease;
             cursor: pointer;
             width: 180px;
             height: 120px;
@@ -294,7 +296,7 @@ nav a{
         }
 
         .swiper-slide {
-            width: 10%; /* Show 3 slides at a time */
+            width:auto; /* Show 3 slides at a time */
             padding: 2px 4px; /* Adjust space between slides */
         }  
 
@@ -355,6 +357,32 @@ nav a{
             object-fit: cover;
             border-radius: 12px;
         }
+
+.controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.controls button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+
+.controls button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 /* --------------------------------------------Benefits------------------------------ */
 
@@ -608,7 +636,7 @@ nav a{
   margin-top: auto; /* Pushes button to bottom */
   padding: 12px 24px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 500px;
   color: #333;
   background-color: #f1f1f1;
   border: 1px solid #dcdcdc;
@@ -1036,70 +1064,69 @@ nav a{
 }
 
 /* ----------------------------------------Footer Section--------------------------------- */
-/* Footer Container */
 .footer {
   font-family: 'Be Vietnam Pro', sans-serif;
-  background: #ffffff; /* Set background color to white */
+  background: #ffffff;
   color: #333;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between; /* Aligns sections horizontally */
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  max-width: 1200px; /* Limits the width of the container */
-  margin: 0 auto; /* Centers the container */
-  padding: 40px 30px; /* Adds padding around the content */
-  overflow: hidden; /* Prevents any unwanted scrollbars */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 30px; /* Increased padding for better spacing */
+  overflow: hidden;
 }
 
-/* Footer Contact Section */
+/* Contact Section */
 .footer-contact {
-  max-width: 300px; /* Limits the width of the contact section */
-  margin-bottom: 20px; /* Adds bottom margin for spacing */
+  max-width: 300px;
+  margin-bottom: 40px;
 }
 
 .footer-contact img.footer-logo {
   background-color: #ff9900;
   padding: 8px;
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footer-contact p {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 16px 0;
 }
 
 .footer-contact p img {
   margin-right: 10px;
 }
 
-/* Footer Links Section */
+/* Links Section */
 .footer-links {
   display: flex;
-  gap: 80px; /* Spacing between link columns */
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 100px;
+  flex-wrap: wrap;
 }
 
 .footer-links h4 {
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer-links p {
-  margin: 6px 0;
+  margin: 8px 0;
   cursor: pointer;
 }
 
-/* Social Icons Section */
+/* Social Icons */
 .social-icons {
   display: flex;
-  gap: 10px; /* Spacing between social icons */
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .social-icons img {
@@ -1116,11 +1143,120 @@ nav a{
   background-color: #ddd;
 }
 
+/* Separator Line */
+.footer-separator {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0 auto;
+  width: 90%;
+}
+
 /* Footer Bottom Section */
 .footer-bottom {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 14px;
   color: #777;
-  background: #ffffff; /* Ensure consistent background color */
+  background: #ffffff;
+}.footer {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background: #ffffff;
+  color: #333;
 }
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  gap: 60px;
+}
+
+/* Contact */
+.footer-contact {
+  max-width: 300px;
+}
+
+.footer-logo {
+  background-color: #ff9900;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.footer-contact p img {
+  margin-right: 10px;
+}
+
+/* Navigation Links */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.footer-links h4 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-links p {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Social Section */
+.footer-social h4 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons img {
+width: 40px;
+  height: 40px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.social-icons img[alt="X"] {
+  transform: scale(0.85); /* Scale it down a bit */
+} 
+
+.social-icons img:hover {
+  background-color: #e0e0e0;
+}
+
+/* Separator */
+.footer-separator {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #777;
+  background: #ffffff;
+}
+

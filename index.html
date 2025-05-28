@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="scripts/main.js"></script>
@@ -135,15 +136,25 @@
 <section class="section-container">
 <div class="video-wrapper">
     <div class="video-inner">
-        <video class="video" controls poster="video.png" id="myVideo">
+        <video class="video" id="myVideo" poster="video.png">
             <source src="Promo-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
+        <!-- Custom Play Button -->
         <div class="playbutton" onclick="playVideo()">
             <img src="playbutton.png" alt="Play Button">
         </div>
+
+        <!-- Pause and Mute Buttons -->
+        <div class="controls">
+    <button id="pauseBtn" onclick="togglePlay()"><i class="fas fa-pause"></i></button>
+    <button id="muteBtn" onclick="toggleMute()"><i class="fas fa-volume-up"></i></button>
+    </div>
+
     </div>
 </div>
+
 </section>
     
     <!-- ------------------------Benefits part---------------------------- -->
@@ -548,18 +559,19 @@
 
 
 <!-- ----------------------------------------------Footer Section--------------------------- -->
-
 <footer class="footer">
   <div class="footer-container">
     <!-- Contact Section -->
     <div class="footer-contact">
       <img src="Logo.png" alt="Logo" class="footer-logo" />
-      <p><img src="https://img.icons8.com/ios-filled/20/000000/email.png "/> hello@skillbridge.com</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/000000/phone.png "/> +91 91813 23 2309</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/000000/marker.png "/> Somewhere in the World</p>
+      <div class="contact-details">
+        <p><img src="https://img.icons8.com/ios-filled/20/000000/email.png" /> hello@skillbridge.com</p>
+        <p><img src="https://img.icons8.com/ios-filled/20/000000/phone.png" /> +91 91813 23 2309</p>
+        <p><img src="https://img.icons8.com/ios-filled/20/000000/marker.png" /> Somewhere in the World</p>
+      </div>
     </div>
 
-    <!-- Links Section -->
+    <!-- Navigation Links -->
     <div class="footer-links">
       <div>
         <h4>Home</h4>
@@ -576,13 +588,19 @@
       </div>
     </div>
 
-    <!-- Social Icons Section -->
-    <div class="social-icons">
-      <img src="ficon.png" alt="Facebook" />
-      <img src="ticon.png" alt="Twitter" />
-      <img src="inicon.png" alt="LinkedIn" />
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <h4>Social Profiles</h4>
+      <div class="social-icons">
+        <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" />
+        <img src="https://img.icons8.com/ios-filled/50/000000/x--v1.png" alt="X" />
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" />
+      </div>
     </div>
   </div>
+
+  <!-- Separator Line -->
+  <hr class="footer-separator" />
 
   <!-- Footer Bottom Section -->
   <div class="footer-bottom">
@@ -590,35 +608,44 @@
   </div>
 </footer>
 
+
 <!-- ---------------------------------------------Brand swiper Section----------------------------------------- -->
 <!-- Swiper JS -->
  <script>
  //  Brand logos -Swiper
 
+
+
 const brandSwiper = new Swiper('.brand-swiper', {
-        effect: 'slide',
-        speed: 300, // Transition speed of 0.3 seconds
-        slidesPerView: 3, // Show 3 slides at a time
-        spaceBetween: 20, // Space between slides
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-            delay: 3000, // Delay between slides
-            disableOnInteraction: false, // Continue autoplay after interaction
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-        },
-    });
+    slidesPerView: 3.25, // Show 3 full + part of next
+    spaceBetween: 20,
+    speed: 300, // Slow transition for smooth continuous effect
+    loop: true,
+    allowTouchMove: false, // Prevent user interruption
+    grabCursor: false,
+    autoplay: {
+        delay: 1000, // No pause between transitions
+        disableOnInteraction: false
+    }
+});
+
+
+
 // play button- video part section
 
- function playVideo() {
-        const video = document.getElementById('myVideo');
-        video.play();
-        document.querySelector('.playbutton').style.display = 'none'; // Hide play button after clicking
-    }
+function playVideo() {
+    const video = document.getElementById('myVideo');
+    const playBtn = document.querySelector('.playbutton');
+    const controls = document.querySelector('.controls');
+
+    playBtn.style.display = 'none'; // Hide play button
+    video.play(); // Play video
+    controls.style.display = 'flex'; // Show custom controls
+}
+
+          
+
+
 
 // FAQ section part 
 
